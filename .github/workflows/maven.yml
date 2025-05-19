@@ -28,11 +28,12 @@ jobs:
 
   docker:
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: Packaging
+          name: Package
       - name: Display structure of downloaded files
         run: ls -R staging
 
