@@ -27,6 +27,8 @@ jobs:
           path: staging
 
   docker:
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/download-artifact@v4
         with:
