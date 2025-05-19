@@ -25,9 +25,13 @@ jobs:
         with:
           name: Package
           path: staging
+
+  docker:
+    steps:
       - uses: actions/download-artifact@v4
         with:
           name: Packaging
           path: staging
       - name: Display structure of downloaded files
         run: ls -R staging
+
